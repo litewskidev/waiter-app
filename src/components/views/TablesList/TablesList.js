@@ -1,16 +1,10 @@
-import { Button, ListGroup, Spinner, Stack } from "react-bootstrap";
+import { Button, ListGroup, Stack } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const TablesList = ({ props }) => {
 
   const tableId = props.id;
   const tableStatus = props.status;
-
-  if (!{ TablesList }) return (
-    <div className="d-flex justify-content-center">
-        <Spinner variant="primary" animation="border" role="status" />
-    </div>
-  )
 
   return(
     <ListGroup variant='flush'>
