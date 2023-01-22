@@ -1,11 +1,4 @@
 {
-  "status": [
-    "Busy",
-    "Cleaning",
-    "Free",
-    "Reserved"
-  ],
-
   "tables": [
     {
       "id": "1",
