@@ -19,22 +19,22 @@ const Table = () => {
 
 
   useEffect(() => {
-    if (status === statuses.cleaning || status === statuses.free) {
+    if(status === statuses.cleaning || status === statuses.free){
       setPeopleAmount(0);
     }
-    if (status !== statuses.busy) {
+    if(status !== statuses.busy){
       setBill(0);
     }
   }, [status]);
 
   useEffect(() => {
-    if (maxPeopleAmount < peopleAmount) {
+    if(maxPeopleAmount < peopleAmount){
       setPeopleAmount(maxPeopleAmount);
     }
   }, [peopleAmount, maxPeopleAmount]);
 
 
-    if (!table) return <Navigate to="/" />
+    if(!table) return <Navigate to="/" />
 
 
   const handleSubmit = (e) => {
