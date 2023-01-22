@@ -1,11 +1,11 @@
-//selectors
-export const getAllTables = ({tables}) => tables;
+// SELECTORS
+export const getAllTables = ({ tables }) => tables;
 
-// actions
+// ACTIONS
 const createActionName = actionName => `app/tables/${actionName}`;
 const UPDATE_TABLES = createActionName('UPDATE_TABLES');
 
-// action creators
+// ACTION CREATORS
 export const updateTables = payload => ({ type: UPDATE_TABLES, payload });
 export const fetchTables = () => {
   return(dispatch) => {

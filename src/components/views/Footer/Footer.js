@@ -1,8 +1,10 @@
+import { Container } from "react-bootstrap";
+
 const Footer = () => {
   return(
-    <div>
-      <h2>Footer</h2>
-    </div>
+    <Container className='text-center text-muted mt-5 mb-5'>
+      Copyright @ litewskidev 2023
+    </Container>
   );
 };
 

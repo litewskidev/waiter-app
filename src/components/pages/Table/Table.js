@@ -1,8 +1,49 @@
+import { useState } from "react";
+import { Button, Col, Form, Row, Stack } from "react-bootstrap";
+
 const Table = () => {
+
+  const options = ["Free", "Busy", "Reserved", "Cleaning"]
+  const [title, setTitle] = useState(options[0]);
+
   return(
     <div>
-      <h1>Table</h1>
-    </div>
+          <h1 className="my-2">Table</h1>
+          <Form>
+            <Form.Group as={Row} className="my-3">
+              <Form.Label column sm={2} lg={1}><strong>Status:</strong></Form.Label>
+              <Col sm={6} lg={3}>
+                <Form.Select defaultValue={title} onChange={(e) => setTitle(e.target.value)} className="form-select" aria-label="Default select example">
+                  {options.map((option, id) => (<option key={id}>{option}</option>))}
+                </Form.Select>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row} className="my-3">
+              <Stack direction="horizontal">
+                <Form.Label column sm={1}><strong>People:</strong></Form.Label>
+                <Col sm={1} >
+                  <Form.Control></Form.Control>
+                </Col>
+                <p className="m-2">/</p>
+                <Col sm={1} >
+                  <Form.Control></Form.Control>
+                </Col>
+              </Stack>
+            </Form.Group>
+
+            <Form.Group as={Row} className="my-3">
+              <Stack direction="horizontal">
+                <Form.Label column sm={1} lg={1}><strong>Bill:</strong></Form.Label>
+                <p className="m-2">$</p>
+                <Col sm={1}>
+                  <Form.Control className="my-2"></Form.Control>
+                </Col>
+              </Stack>
+            </Form.Group>
+            <Button variant="primary" type="submit">Update</Button>
+          </Form>
+        </div>
   );
 };
 
