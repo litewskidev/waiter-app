@@ -86,7 +86,7 @@ const Table = () => {
               <b>Bill:</b>
             </Form.Label>
             <Form.Text>
-              <p className="m-1"><h6>$ </h6></p>
+              <h6 className="m-2">$</h6>
             </Form.Text>
             <Col sm={2} lg={1}>
               <Form.Control type="number" value={bill} onChange={(e) => setBill(e.target.value)} />
