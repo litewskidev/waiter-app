@@ -19,9 +19,11 @@ const Table = () => {
 
 
   useEffect(() => {
-    if(status === statuses.cleaning || status === statuses.free){
-      setPeopleAmount(0);
-    }
+    /*  if(status === statuses.cleaning || status === statuses.free){
+        setPeopleAmount('0');
+        }  */
+    //        BRAK W OGÓLE TAKIEGO INPUTU WYDAJE SIĘ LEPSZY?
+
     if(status !== statuses.busy){
       setBill(0);
     }
