@@ -8,13 +8,11 @@ import { Container } from 'react-bootstrap';
 import { fetchTables } from './redux/tablesRedux';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchStatus } from './redux/statusRedux';
 
 const App = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => dispatch(fetchTables()), [dispatch]);
-  useEffect(() => dispatch(fetchStatus()), [dispatch]);
 
   return(
     <Container>
